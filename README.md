@@ -8,4 +8,24 @@
  3)Set up your keys
        sudo apt install curl # if you haven't already installed curl
        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+  4) Make sure your Debian package index is up-to-date:
+    • sudo apt update
+    • sudo apt install ros-noetic-desktop-full
+ 5)  Now, in New terminal paste the below command.  
+   echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   source ~/.bashrc
+ 6) Let's create and build a catkin workspace:
+   $ mkdir -p ~/catkin_ws/src
+   $ cd ~/catkin_ws/
+   $ catkin_make
+ 7)Now, 
+   $ cd ~/catkin_ws/src
+   $  git clone https://github.com/Bariflo-Labs/ROS.git
+   $ cd  . .
+   $ catkin_make
+# WHEN YOU FACE AN ERROR OF GEOGRAPHIC PACKAGE. BELOW COMMAND WILL HELP YOU TO RESOLVE THE ISSUE. iN NEW TERMINAL
+   $ sudo apt-get install geographiclib* ros-noetic-geographic-*
+   $ cd ~/catkin_ws
+   $ catkin_make
+
  
