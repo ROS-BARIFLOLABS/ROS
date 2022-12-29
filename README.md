@@ -20,7 +20,6 @@
    $ catkin_make
  7)Now, 
    $ cd ~/catkin_ws/src
-
    $  git clone https://github.com/Bariflo-Labs/ROS.git
    $ cd  . .
    $ catkin_make
