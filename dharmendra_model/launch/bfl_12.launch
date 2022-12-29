@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<launch>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/ -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find dharmendra_model)/urdf/bfl_12/bfl_12.urdf.xacro" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model bfl_12 -param robot_description" />
+  <arg name="multi_robot_name" default=""/>
+
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find dharmendra_model)/urdf/bfl_12/bfl_12.urdf.xacro'"/>
+  <param name="robot_description" command="$(arg urdf_file)"/>  
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <!--param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value="$(arg multi_robot_name)"/-->
+  </node>
+  <node pkg="tf" type="static_transform_publisher" name="static_publisher" args="0 0 0 -1.5708 0 -1.5708 chessy_link kinect_camera 100" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dharmendra_model)/rviz/bfl_12.rviz"/>
+ 
+</launch>
+
