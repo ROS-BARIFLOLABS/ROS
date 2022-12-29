@@ -1,0 +1,7 @@
+<launch>
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [bfl_1]"/>
+  <param name="model" value="$(arg model)"/>
+  <!-- turtlebot3_teleop_key already has its own built in velocity smoother -->
+  <node pkg="turtlebot3_teleop" type="keyboard_controller" name="keyboard_controller"  output="screen">
+  </node>
+</launch>
