@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<robot name="4whl_lidar" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find dharmendra_model)/gazebo/4whl_lidar/4whl_lidar.gazebo"/>
+  
+  <link name= "0base_footprint" /> 
+ 
+  <joint name="base_joint" type="fixed">
+    <parent link="0base_footprint"/>
+    <child link="1chessy_link"/>
+    <origin xyz="0.04061 -0.0922  -0.0155" rpy="0 0 0"/>
+  </joint>
+ 
+  <joint name="back_left_joint" type="revolute">
+    <parent link="1chessy_link"/>
+    <child link="2left_back_link"/>
+    <origin xyz="0.06435 -0.09418 -0.015" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="2left_back_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="back_right_joint" type="revolute">
+    <parent link="1chessy_link"/>
+    <child link="3right_back_link"/>
+    <origin xyz="0.06435  0.09414 -0.015" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="3right_back_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="front_right_joint" type="revolute">
+    <parent link="1chessy_link"/>
+    <child link="5right_front_link"/>
+    <origin xyz="-0.09187  0.09414 -0.015" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+   <link name="5right_front_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="front_left_joint" type="revolute">
+    <parent link="1chessy_link"/>
+    <child link="4left_front_link"/>
+    <origin xyz="-0.09187 -0.09418 -0.015" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="4left_front_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <joint name="lidar_joint" type="fixed">
+    <parent link="1chessy_link"/>
+    <child link="ldar_link"/>
+    <origin xyz="0.06659 0.00097 0.055" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  
+  <link name="ldar_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <link name="1chessy_link">
+    <inertial>
+      <mass value="13"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision>
+      <origin xyz="-0.01153 -0.0009   0.005" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.15 0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.01153 -0.0009   0.005" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.15 0.05"/>
+      </geometry>
+    </visual>
+  </link>
+  
+
+</robot>

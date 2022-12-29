@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<robot name="bfl_2" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_2_materials.gazebo" />
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_2_physics.gazebo" />
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_2_plugins.gazebo" />
+   
+  <joint name="bfl_2__link_1_JOINT_0" type="revolute">
+    <parent link="bfl_2__link_1"/>
+    <child link="bfl_2__link_2"/>
+    <origin xyz="0.63409 -0.00408 -0.1042" rpy="0      -1.56933  0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_2__link_1_JOINT_1" type="revolute">
+    <parent link="bfl_2__link_1"/>
+    <child link="bfl_2__link_3"/>
+    <origin xyz="-0.62708 -0.00129 -0.07814" rpy="0      1.54813 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <link name="bfl_2__link_1">
+    <inertial>
+      <mass value="0.225868"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0354084" ixy="0" ixz="0" iyy="0.0354084" iyz="0" izz="0.0705088"/>
+    </inertial>
+    <collision name="bfl_2__collision">
+      <origin xyz="-0.00701  0.00537  0.18234" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.79015" length="0.090441"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_2__visual">
+      <origin xyz="-0.00701  0.00537  0.18234" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.79015" length="0.0904415"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_2__link_2">
+    <inertial>
+      <mass value="0.0152714"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000183382" ixy="0" ixz="0" iyy="0.000183382" iyz="0" izz="0.000348998"/>
+    </inertial>
+    <collision name="bfl_2__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.21379" length="0.083545"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_2__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.21379" length="0.0835446"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_2__link_3">
+    <inertial>
+      <mass value="0.0159258"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000182628" ixy="0" ixz="0" iyy="0.000182628" iyz="0" izz="0.00034253"/>
+    </inertial>
+    <collision name="bfl_2__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.207402" length="0.09253"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_2__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.207402" length="0.0925299"/>
+      </geometry>
+    </visual>
+  </link>
+  
+</robot>

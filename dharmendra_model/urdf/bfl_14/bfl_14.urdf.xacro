@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<robot name="bfl_14" xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:include filename="$(find dharmendra_model)/gazebo/bfl_14/bfl_14.gazebo"/>
+
+    <link name="camera_optical_link"/>
+    
+    <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_optical_link"/>
+    <origin xyz="-0.08272  0.00202  0.09503" rpy="-1.5708 0      -1.5708"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+    </joint>
+    
+  <joint name="back_left_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="back_left_link"/>
+    <origin xyz="-0.04966  0.05451 -0.05656" rpy="0 0 0"/>
+    <axis xyz="0 -1  0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="back_right_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="back_right_link"/>
+    <origin xyz="-0.04966 -0.05446 -0.05656" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.00144 -0.0008   0.00821" rpy="-3.0000e-05 -8.0000e-05 -3.0727e-01"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="-0.09996  0.00052 -0.03749" rpy="0 0  3.14159"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  <joint name="front_left_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="front_left_link"/>
+    <origin xyz="0.06153  0.05449 -0.05656" rpy="0 0 0"/>
+    <axis xyz="0 -1  0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="front_right_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="front_right_link"/>
+    <origin xyz="0.06153 -0.0545  -0.05656" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="0.0" velocity="0.0"/>
+  </joint>
+  <link name="base_link">
+    <inertial>
+      <mass value="1.01774"/>
+      <origin xyz="0.0091   0      -0.03372" rpy="0 0 0"/>
+      <inertia ixx="0.00123679" ixy="4.78648e-20" ixz="-3.11721e-05" iyy="0.00293732" iyz="1.98612e-20" izz="0.00365409"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/base_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/base_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="back_left_link">
+    <inertial>
+      <mass value="0.0066289"/>
+      <origin xyz="0    -0.005  0" rpy="0 0 0"/>
+      <inertia ixx="4.3359e-07" ixy="1.1029e-24" ixz="2.93e-23" iyy="7.6063e-07" iyz="-1.7922e-24" izz="4.3359e-07"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/back_left_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/back_left_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="back_right_link">
+    <inertial>
+      <mass value="0.0066289"/>
+      <origin xyz="0    0.005 0" rpy="0 0 0"/>
+      <inertia ixx="4.3359e-07" ixy="-3.108e-24" ixz="-2.4808e-23" iyy="7.6063e-07" iyz="-1.6326e-24" izz="4.3359e-07"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/back_right_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/back_right_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="front_left_link">
+    <inertial>
+      <mass value="0.0066289"/>
+      <origin xyz="0    -0.005  0" rpy="0 0 0"/>
+      <inertia ixx="4.3359e-07" ixy="-2.7573e-25" ixz="5.076e-23" iyy="7.6063e-07" iyz="4.1359e-24" izz="4.3359e-07"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/front_left_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/front_left_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="front_right_link">
+    <inertial>
+      <mass value="0.0066289"/>
+      <origin xyz="0    0.005 0" rpy="0 0 0"/>
+      <inertia ixx="4.3359e-07" ixy="-2.8345e-24" ixz="5.0785e-24" iyy="7.6063e-07" iyz="-1.8072e-24" izz="4.3359e-07"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/front_right_link.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://full_tesla_truck_urdf/meshes/front_right_link.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="lidar_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="camera_link">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

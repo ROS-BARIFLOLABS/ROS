@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<robot name="bfl_5_lid" xmlns:xacro="http://ros.org/wiki/xacro">
+   <!--xacro:include filename="$(find turtlebot3_description)/urdf/common_properties.xacro"/-->
+   <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_5_lidar/bfl_5_lidar.gazebo"/>
+  
+ <link name= "base_footprint" /> 
+ 
+ <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.04061 -0.0922  -0.0155" rpy="0 0 0"/>
+ </joint>
+ 
+ <link name="base_link">
+    <inertial>
+      <mass value="0.309481"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.148031" ixy="0" ixz="0" iyy="0.0262218" iyz="0" izz="0.17339"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.00595 -0.00225 -0.04012" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2.3923 0.129378"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.00595 -0.00225 -0.04012" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2.3923 0.129378"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="oright_front_link"/>
+    <origin xyz="-0.56242 -0.88125 -0.04012" rpy="-1.57101 -0.01655 -1.55771"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="oright_front_link">
+    <inertial>
+      <mass value="0.0232297"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000300218" ixy="0" ixz="0" iyy="0.000300218" iyz="0" izz="0.000540024"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="nleft_front_link"/>
+    <origin xyz="0.56943 -0.89152 -0.03775" rpy="-1.57101 -0.01655 -1.55771"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="nleft_front_link">
+    <inertial>
+      <mass value="0.0232297"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000300218" ixy="0" ixz="0" iyy="0.000300218" iyz="0" izz="0.000540024"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <joint name="back_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="mright_back_link"/>
+    <origin xyz="-0.56097  0.85576 -0.04012" rpy="-1.57101 -0.01655 -1.55771"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+  <link name="mright_back_link">
+    <inertial>
+      <mass value="0.0232297"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000300218" ixy="0" ixz="0" iyy="0.000300218" iyz="0" izz="0.000540024"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <joint name="back_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_back_link"/>
+    <origin xyz="0.5659   0.87025 -0.04178" rpy="-1.57101 -0.01655 -1.55771"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  
+   <link name="left_back_link">
+    <inertial>
+      <mass value="0.0232297"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000300218" ixy="0" ixz="0" iyy="0.000300218" iyz="0" izz="0.000540024"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.215626" length="0.124916"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="plidar_link"/>
+    <origin xyz="-0.01788  0.04902  0.19991" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  
+  <link name="plidar_link">
+    <inertial>
+      <mass value="0.1868"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00826764" ixy="0" ixz="0" iyy="0.00826764" iyz="0" izz="0.013065"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.374009" length="0.333864"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.374009" length="0.333864"/>
+      </geometry>
+    </visual>
+  </link> 
+</robot>

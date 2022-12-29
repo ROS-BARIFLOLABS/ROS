@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<robot name="bfl_3" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_3/bfl_3_material.gazebo" />
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_3/bfl_3_physics.gazebo" />
+  <xacro:include filename="$(find dharmendra_model)/gazebo/bfl_3/bfl_3_plugins.gazebo" />
+  
+  <joint name="bfl_3__left_wheel" type="revolute">
+    <parent link="bfl_3__link_0"/>
+    <child link="bfl_3__link_1"/>
+    <origin xyz="0.06312  0.09131 -0.00312" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_3__right_wheel" type="revolute">
+    <parent link="bfl_3__link_0"/>
+    <child link="bfl_3__link_1_clone"/>
+    <origin xyz="0.06312 -0.0909   0.00687" rpy="1.5708 0     0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="bfl_3__caster_wheel" type="revolute">
+    <parent link="bfl_3__link_0"/>
+    <child link="bfl_3__caster_wheel__revolute_dummy_link"/>
+    <origin xyz="-0.11771 -0.00073 -0.03562" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <link name="bfl_3__caster_wheel__revolute_dummy_link"/>
+  <joint name="bfl_3__caster_wheel__revolute_dummy_joint" type="revolute">
+    <parent link="bfl_3__caster_wheel__revolute_dummy_link"/>
+    <child link="bfl_3__link_2"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1e+16" upper="1e+16" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <link name="bfl_3__link_0">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="bfl_3__collision">
+      <origin xyz="-0.00852  0.00032  0.00687" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.15 0.05"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_3__visual">
+      <origin xyz="-0.00852  0.00032  0.00687" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.15 0.05"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_3__link_1">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="bfl_3__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_3__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_3__link_1_clone">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="bfl_3__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.03"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_3__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.03"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="bfl_3__link_2">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="bfl_3__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.0175"/>
+      </geometry>
+    </collision>
+    <visual name="bfl_3__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.0175"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
