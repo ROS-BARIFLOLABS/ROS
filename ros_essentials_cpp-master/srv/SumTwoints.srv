@@ -1,4 +1,0 @@
-int64 c
-int64 d
----
-int64 add
