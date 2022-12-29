@@ -34,5 +34,3 @@
    $ sudo apt-get install geographiclib* ros-noetic-geographic-*
    $ cd ~/catkin_ws
    $ catkin_make
-	
-
