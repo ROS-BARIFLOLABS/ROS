@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot name="bfl_3" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="body_friction" value="1.0"/>
+  <xacro:property name="wheel_friction" value="50"/>
+
+  <!-- chassy -->
+  <gazebo reference="link_0">
+    <mu1>${body_friction}</mu1>
+    <mu2>${body_friction}</mu2>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <!--left_wheel -->
+  <gazebo reference="link_1">
+    <mu1>${wheel_friction}</mu1>
+    <mu2>${wheel_friction}</mu2>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  
+  <!-- front_right_wheel -->
+  <gazebo reference="link_1_clone">
+    <mu1>${wheel_friction}</mu1>
+    <mu2>${wheel_friction}</mu2>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+  
+  <!-- caster-->
+  <gazebo reference="link_2">
+    <mu1>${wheel_friction}</mu1>
+    <mu2>${wheel_friction}</mu2>
+    <selfCollide>true</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
+</robot>

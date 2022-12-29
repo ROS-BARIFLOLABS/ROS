@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="bfl_3" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="body_color" value="Gazebo/Red"/>
+  <xacro:property name="body_color1" value="Gazebo/Blue"/>
+
+   <!-- chassy -->
+  <gazebo reference="link_0">
+    <material>${body_color}</material>
+  </gazebo>
+
+  <!-- front_left_wheel -->
+  <gazebo reference="link_1">
+    <material>${body_color1}</material>
+  </gazebo>
+
+  <!-- front_right_wheel -->
+  <gazebo reference="link_1_clone">
+    <material>${body_color1}</material>
+  </gazebo>
+  
+  <!-- caster_wheel -->
+   <gazebo reference="link_2">
+    <material>${body_color1}</material>
+  </gazebo>
+</robot>
