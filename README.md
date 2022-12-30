@@ -7,7 +7,8 @@
  1) Go ros official page to install ros noetic in UBUNTU-20.04(focal) ( http://wiki.ros.org/ROS/Installation )
 
  2) Setup your sources.list
-      Setup your computer to accept software from packages.ros.org.
+ 
+    Setup your computer to accept software from packages.ros.org.
     
        •  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     
@@ -19,40 +20,40 @@
   
   4) Make sure your Debian package index is up-to-date:
     
-      • sudo apt update
+       • sudo apt update
 
-      • sudo apt install ros-noetic-desktop-full
+       • sudo apt install ros-noetic-desktop-full
     
   5)  Now, in New terminal paste the below command. 
  
-      echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+       echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
    
-      source ~/.bashrc
+       source ~/.bashrc
    
   6) Let's create and build a catkin workspace:
 
-     $ mkdir -p ~/catkin_ws/src
+       $ mkdir -p ~/catkin_ws/src
 
-     $ cd ~/catkin_ws/
+       $ cd ~/catkin_ws/
 
-     $ catkin_make
+       $ catkin_make
    
   7)Now, 
  
-     $ cd ~/catkin_ws/src
+       $ cd ~/catkin_ws/src
 
-     $  git clone https://github.com/Bariflo-Labs/ROS.git
+       $  git clone https://github.com/Bariflo-Labs/ROS.git
 
-     $ cd  . .
+       $ cd  . .
 
-     $ catkin_make
+       $ catkin_make
   
  # WHEN YOU FACE AN ERROR OF GEOGRAPHIC PACKAGE. BELOW COMMAND WILL HELP YOU TO RESOLVE THE ISSUE. iN NEW TERMINAL
 
-     $ sudo apt-get install geographiclib* ros-noetic-geographic-*
+       $ sudo apt-get install geographiclib* ros-noetic-geographic-*
 
-     $ cd ~/catkin_ws
+       $ cd ~/catkin_ws
 
-     $ catkin_make
+       $ catkin_make
 
  
