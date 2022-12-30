@@ -41,7 +41,9 @@
   $ catkin_make
 # WHEN YOU FACE AN ERROR OF GEOGRAPHIC PACKAGE. BELOW COMMAND WILL HELP YOU TO RESOLVE THE ISSUE. iN NEW TERMINAL
    $ sudo apt-get install geographiclib* ros-noetic-geographic-*
+   
    $ cd ~/catkin_ws
+   
    $ catkin_make
 
  
