@@ -1,3 +1,5 @@
 # THIS  FILE IS USED TO CONVERT SDF FILES TO URDF FILES IN RESPECTIVE LOCATION. 
+
 $ rosrun pysdf sdf2urdf <sdf file name> <urdf file name>
-  ex rosrun pysdf sdf2urdf model.sdf bfl_14.urdf.xacro
+
+# example rosrun pysdf sdf2urdf model.sdf bfl_14.urdf.xacro
