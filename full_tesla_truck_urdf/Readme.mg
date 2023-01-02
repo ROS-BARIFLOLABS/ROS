@@ -8,3 +8,4 @@
 3.Follow our video for further process.   
 
 After creating the file create .gazebo and launch file 
+bfl_14 in dharmendra_model is same of full_tesla_truck_urdf
