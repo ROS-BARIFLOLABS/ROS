@@ -1,4 +1,4 @@
-# This files has been extracted from solidworks.
+#This files has been extracted from solidworks.
 
 # Steps to create a urdf file from solidwoks.
 
