@@ -1,4 +1,4 @@
-# Steps to create a urdf file from solidwoks.
+# Steps to create a urdf file from solidwoks
 
  1. http://wiki.ros.org/sw_urdf_exporter This link will help you  to download the sw2urdf .exe for different versions of solidworks.
 
