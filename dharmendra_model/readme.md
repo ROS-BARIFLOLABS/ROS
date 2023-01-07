@@ -14,6 +14,6 @@ Now we need a 3D view of the object present in front of vehicle or the lidar det
 
 **bfl_12** is the solution where the camera and lidar projection is coincide. For addition we can do 2D mapping in rviz.
 
-# Launch_files of robot model
+# Launch_files of bfl_14 model
 
-$ roslaunch robot two_wheel_robot.launch
+$ roslaunch dharmendra_model bfl_14.launch
