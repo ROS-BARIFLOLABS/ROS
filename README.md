@@ -18,19 +18,19 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
       
        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
   
-  4) Make sure your Debian package index is up-to-date:
+  4) Make sure your Debian package index is up-to-date
     
        • sudo apt update
 
        • sudo apt install ros-noetic-desktop-full
     
-  5)  Now, in New terminal paste the below command. 
+  5)  Now, in New terminal paste the below command
  
        echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
    
        source ~/.bashrc
    
-  6) Let's create and build a catkin workspace:
+  6) Let's create and build a catkin workspace
 
        $ mkdir -p ~/catkin_ws/src
 
