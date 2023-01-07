@@ -4,7 +4,11 @@
 
  2) After downloading the .exe file. Go to options > Add-Ins > In the end the sw2urdf file is their not. If not restart the solidworks and check once again.
 
- 3)Follow our video for further process.   
+ 3) Follow our video for further process.   
 
  After creating the file create .gazebo and launch file 
  bfl_14 in dharmendra_model is same of full_tesla_truck_urdf
+ 
+**The below command is used to open the model which is extracted from solidworks.**
+
+$roslaunch full_tesla_truck_urdf gazebo.launch
