@@ -17,3 +17,7 @@ Now we need a 3D view of the object present in front of vehicle or the lidar det
 # Launch_files of bfl_14 model
 
 $ roslaunch dharmendra_model bfl_14.launch
+
+**The below screenshots are the resultant view of the commnads**
+
+![Screenshot from 2023-01-07 14-42-51](https://user-images.githubusercontent.com/121598999/211143187-e1f01864-1e9e-4ec5-b073-c91c1dbf07d7.png)
