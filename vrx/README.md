@@ -25,6 +25,7 @@ The VRX environment is also the "virtual venue" for the [VRX Competition](https:
      $roslaunch vrx_gazebo usv_keydrive.launch
 
 ## The highlighted part is used to control the amplitude of waves (gain & period) after updating the values use catkin_make
+   catkin_ws/src/vrx/wave_gazebo/world_models/ocean_waves/model.xacro
 ![Screenshot from 2023-01-07 16-00-17](https://user-images.githubusercontent.com/121598999/211145893-d7576aa3-7421-4310-a607-e3a51c8f1b9c.png)
      $ cd catkin_ws
      $ catkin_make
