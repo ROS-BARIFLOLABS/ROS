@@ -21,6 +21,14 @@ The VRX environment is also the "virtual venue" for the [VRX Competition](https:
      $roslaunch wamv_gazebo rviz_vrx.launch
    ![Screenshot from 2023-01-07 15-34-40](https://user-images.githubusercontent.com/121598999/211145009-234bfc54-01a1-437c-97ce-b65144890af1.png)
 
+## To control the vehicle through keyboard
+     $roslaunch vrx_gazebo usv_keydrive.launch
+
+## The highlighted part is used to control the amplitude of waves (gain & period) after updating the values use catkin_make
+![Screenshot from 2023-01-07 16-00-17](https://user-images.githubusercontent.com/121598999/211145893-d7576aa3-7421-4310-a607-e3a51c8f1b9c.png)
+     $ cd catkin_ws
+     $ catkin_make
+
 
 ## Getting Started
 
