@@ -7,6 +7,9 @@ This repository is the home to the source code and software documentation for th
 ## Coming Soon: Gazebo Sim Port
 We're happy to announce VRX will soon be switching over from Gazebo Classic to the newer Gazebo simulator (formerly [Ignition Gazebo](https://www.openrobotics.org/blog/2022/4/6/a-new-era-for-gazebo)). Please see the [VRX Gazebosim Port Wiki page](https://github.com/osrf/vrx/wiki/VRX-Gazebosim-Port) for key details.
 
+## TO launch the vrx gazebo model.
+  $roslaunch vrx_2019 vrx.launch
+
 ## The VRX Competition
 The VRX environment is also the "virtual venue" for the [VRX Competition](https://github.com/osrf/vrx/wiki). Please see our Wiki for tutorials and links to registration and documentation relevant to the virtual competition. 
 
