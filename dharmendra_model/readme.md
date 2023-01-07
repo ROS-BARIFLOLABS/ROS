@@ -20,4 +20,10 @@ $ roslaunch dharmendra_model bfl_14.launch
 
 **The below screenshots are the resultant view of the commnads**
 
-![Screenshot from 2023-01-07 14-42-51](https://user-images.githubusercontent.com/121598999/211143187-e1f01864-1e9e-4ec5-b073-c91c1dbf07d7.png)
+![Screenshot from 2023-01-07 14-42-51](https://user-images.githubusercontent.com/121598999/211143219-6d07f6da-5ecc-4b32-a730-62042fd4351f.png)
+
+![Screenshot from 2023-01-07 14-42-42](https://user-images.githubusercontent.com/121598999/211143225-f435d087-d4cd-4129-ba3b-8fe275d6c286.png)
+
+![Screenshot from 2023-01-07 14-41-56](https://user-images.githubusercontent.com/121598999/211143229-4e3acbb4-ea15-4cf2-9bb1-5877b0522c0e.png)
+
+![Screenshot from 2023-01-07 14-42-30](https://user-images.githubusercontent.com/121598999/211143241-41fbd44f-b82b-4289-912e-219be6b93603.png)
