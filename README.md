@@ -55,5 +55,9 @@ ROS is an open-source, meta-operating system for your robot. It provides the ser
        $ cd ~/catkin_ws
 
        $ catkin_make
+       
+  # Point Cloud2 shows the 3D projection view of the camera in gazebo
+  
+  ![Screenshot from 2023-01-07 14-42-51](https://user-images.githubusercontent.com/121598999/211144146-c3016b47-6509-47c2-b574-377d0cdce081.png)
 
- 
+  ![Screenshot from 2023-01-07 14-42-30](https://user-images.githubusercontent.com/121598999/211144155-e57058ac-218c-48f6-a2f1-c5b74570727a.png)
