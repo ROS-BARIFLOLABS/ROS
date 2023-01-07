@@ -1,7 +1,7 @@
 # run this command 
 $roslaunch robot two_wheel_robot.launch
 
-This command shows the bot with the gazebo and rviz also
+**This command shows the bot with the gazebo and rviz also**
 
 ![Screenshot from 2023-01-07 14-55-36](https://user-images.githubusercontent.com/121598999/211143671-36d56816-2f65-445d-972e-a938f613339a.png)
 
