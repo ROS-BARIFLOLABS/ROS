@@ -19,7 +19,7 @@ The VRX environment is also the "virtual venue" for the [VRX Competition](https:
 ## To launch rviz file of vrx
 
      $roslaunch wamv_gazebo rviz_vrx.launch
-     ![Screenshot from 2023-01-07 15-34-40](https://user-images.githubusercontent.com/121598999/211145009-234bfc54-01a1-437c-97ce-b65144890af1.png)
+   ![Screenshot from 2023-01-07 15-34-40](https://user-images.githubusercontent.com/121598999/211145009-234bfc54-01a1-437c-97ce-b65144890af1.png)
 
 
 ## Getting Started
